@@ -1,0 +1,20 @@
+{
+  "name": "node_resampler",
+  "version": "0.0.1",
+  "description": "Resamples pcm data",
+  "main": "reampler.js",
+  "dependencies": {
+    "nan": "~1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "node-gyp rebuild"
+  },
+  "author": "Henri Abel",
+  "gypfile": true,
+  "repository" :
+  {
+    "type" : "git", 
+    "url" : "https://github.com/henriAbel/node_resampler.git"
+  }
+}
