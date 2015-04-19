@@ -1,8 +1,8 @@
 {
   "name": "node_resampler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Resamples pcm data",
-  "main": "reampler.js",
+  "main": "resampler.js",
   "dependencies": {
     "nan": "~1.7.0"
   },

@@ -7,8 +7,12 @@ var Resampler = function(opts) {
 	this.bind = new node_resampler(opts.sourceRate, opts.targetRate, opts.stereo);
 	this.buff = new Buffer(0);
 }
+
 util.inherits(Resampler, stream.Transform);
 
+Resampler.prototype.configure = function(opts) {
+	this.bind.configure(opts.sourceRate, opts.targetRate, opts.stereo);
+}
 
 Resampler.prototype._transform = function(chunk, encoding, done) {
 	var self = this;

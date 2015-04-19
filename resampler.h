@@ -12,7 +12,10 @@ class Resampler : public node::ObjectWrap {
 
 		static NAN_METHOD(New);
 		static NAN_METHOD(Resample);
+		static NAN_METHOD(Configure);
 		static v8::Persistent<v8::Function> constructor;
 
 		sample_t sampleData;
 };
+
+void configure(sample_t* sampleData, const v8::Arguments& args);
