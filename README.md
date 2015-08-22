@@ -4,9 +4,9 @@ C++ libswresample bindings for audio resampling
 Requirements
 ------------
 libswresample
-* Ubuntu/Debian via [Jon Severinsson's FFmpeg PPA](https://launchpad.net/~jon-severinsson/+archive/ubuntu/ffmpeg)
+* Ubuntu 15.04
 ```sh
-$ sudo apt-get install libswresample-dev
+$ sudo apt-get install libswresample-ffmpeg-dev
 ```
 * Centos
 ```sh
