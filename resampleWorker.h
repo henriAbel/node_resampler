@@ -2,9 +2,12 @@
 #include <nan.h>
 #include "./sampleStruct.h"
 
-class ResampleWorker : public NanAsyncWorker {
+using Nan::AsyncWorker;
+using Nan::Callback;
+
+class ResampleWorker : public AsyncWorker {
 	public:
-		ResampleWorker(NanCallback* callback, char* src_data, size_t len, sample_t* sampleData);
+		ResampleWorker(Callback* callback, char* src_data, size_t len, sample_t* sampleData);
 		~ResampleWorker();
 		void Execute();
 		void HandleOKCallback();

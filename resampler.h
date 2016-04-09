@@ -2,7 +2,7 @@
 #include <nan.h>
 #include "./sampleStruct.h"
 
-class Resampler : public node::ObjectWrap {
+class Resampler : public Nan::ObjectWrap {
 	public:
 		static void Init(v8::Handle<v8::Object> exports);
 
@@ -13,9 +13,9 @@ class Resampler : public node::ObjectWrap {
 		static NAN_METHOD(New);
 		static NAN_METHOD(Resample);
 		static NAN_METHOD(Configure);
-		static v8::Persistent<v8::Function> constructor;
+		static Nan::Persistent<v8::Function> constructor;
 
 		sample_t sampleData;
 };
 
-void configure(sample_t* sampleData, const v8::Arguments& args);
+void configure(sample_t* sampleData, const Nan::FunctionCallbackInfo<v8::Value>& info);
